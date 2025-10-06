@@ -15,6 +15,7 @@
         <router-link class="signup-button" to="/signup">가입하기</router-link>
     </div>
 
+
 </template>
 
 <script>
