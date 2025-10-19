@@ -1,10 +1,15 @@
 <template>
   <div>
-    <p>index: {{ index }}</p>
-    <button @click="incrementIndex">increment index</button>
-
-    <p>계산된 값: {{ computedValue }}</p>
-    <button @click="incrementCount">increment count</button>
+    <ul>
+        <li v-for="(item, index) in items" :key="index">
+            <span>
+                {{ item.id }} - 
+            </span>
+            <span>
+                {{ item.name }}
+            </span>
+        </li>
+    </ul>
   </div>
 </template>
 
@@ -13,31 +18,16 @@ export default {
     name: "DemoPage",
     data() {
         return {
-            index: 0,
-            count: 0,
+            items: [
+                {id: 1, name: "Apple"},
+                {id: 2, name: "Banana"},
+                {id: 3, name: "Orange"},
+                {id: 4, name: "Data"},
+                {id: 5, name: "Elderberry"},
+            ],
         };
     },
-    computed: {
-        computedValue() {
-            return this.count * 2;
-        },
-    },
-    watch: {
-        count(newValue, oldValue) {
-            console.log(`count 변화 감지: ${oldValue} -> ${newValue}`);
-        },
-        index(newValue, oldValue) {
-            console.log(`index 변화 감지: ${oldValue} -> ${newValue}`);
-        },
-    },
-    methods: {
-        incrementCount() {
-            this.count += 1;
-        },
-        incrementIndex() {
-            this.index++;
-        }
-    },
+
     
 };
 </script>

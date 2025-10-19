@@ -33,7 +33,8 @@ export default {
     },
     methods: {
         login() {
-            console(this.email, this);
+            console.log(this.email, this);
+            this.$router.push('/main');
         }
     },
 };
