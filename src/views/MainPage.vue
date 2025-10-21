@@ -6,13 +6,13 @@
         
     </div> 
     <TweetBar/>
-    <FeedList/>
+    <feed-list/>
     </div>
 </template>
 
 <script>
 import TweetBar from '@/components/TweetBar.vue';
-import FeedList from '@/components/FeedList.vue';
+import FeedList from '../components/FeedList.vue';
 export default {
     name: "MainPage",
     components: {TweetBar, FeedList},
