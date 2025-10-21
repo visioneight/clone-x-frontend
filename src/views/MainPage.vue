@@ -13,9 +13,16 @@
 <script>
 import TweetBar from '@/components/TweetBar.vue';
 import FeedList from '../components/FeedList.vue';
+import { useUserStore } from '@/store/userStore.js';
+
 export default {
     name: "MainPage",
     components: {TweetBar, FeedList},
+    data() {
+        return {
+            userStore: useUserStore(),
+        };
+    },
 }
 </script>
 

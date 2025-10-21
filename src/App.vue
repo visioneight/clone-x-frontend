@@ -1,5 +1,7 @@
 <template>
   <div class="container">
+    <vue3-confirm-dialog></vue3-confirm-dialog>
+
     <router-link to="/demo">데모페이지로 이동</router-link>
     <router-view/>
   </div>
